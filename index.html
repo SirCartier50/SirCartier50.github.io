@@ -1,527 +1,659 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mignot Mesele — Software Engineer</title>
+  <meta name="description" content="Software engineer in Santa Cruz, California. I build agents and infrastructure that keep working when nobody is watching them.">
+  <meta name="author" content="Mignot Mesele">
+  <meta name="theme-color" content="#0B0D1A">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mignot Mesele — Software Engineer">
+  <meta property="og:description" content="Agents, cloud infrastructure and full-stack products. Seven things I built and how they work.">
+  <meta property="og:url" content="https://sircartier50.github.io/">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="css/site.css" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <div class="topbar" aria-hidden="true"><div class="topbar__fill"></div></div>
+
+  <nav class="rail" aria-label="Sections">
+    <div class="rail__fill" aria-hidden="true"></div>
+    <ul class="rail__nodes">
+      <li><a class="rail__link" data-nav href="#top"><span class="rail__dot"></span><span class="rail__label">Top</span></a></li>
+      <li><a class="rail__link" data-nav href="#about"><span class="rail__dot"></span><span class="rail__label">About</span></a></li>
+      <li><a class="rail__link" data-nav href="#work"><span class="rail__dot"></span><span class="rail__label">Experience</span></a></li>
+      <li><a class="rail__link" data-nav href="#education"><span class="rail__dot"></span><span class="rail__label">Education</span></a></li>
+      <li><a class="rail__link" data-nav href="#projects"><span class="rail__dot"></span><span class="rail__label">Projects</span></a></li>
+      <li><a class="rail__link" data-nav href="#stack"><span class="rail__dot"></span><span class="rail__label">Stack</span></a></li>
+      <li><a class="rail__link" data-nav href="#contact"><span class="rail__dot"></span><span class="rail__label">Contact</span></a></li>
+    </ul>
+  </nav>
+
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet">Menu</button>
+  <div class="sheet" id="sheet" hidden>
+    <a href="#about">About</a>
+    <a href="#work">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ===================================================== hero ========= -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">Software engineer — Santa Cruz, California</p>
+
+      <h1 class="hero__name"><span>Mignot</span><span class="n2">Mesele</span></h1>
+
+      <p class="hero__thesis">
+        I build systems that keep working when nobody is watching them —
+        <strong>agents that read an inbox, run a cloud account, or check a careers page</strong>,
+        and only speak up when something actually needs a person.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="Mignot_Mesele_Resume.pdf" download="Mignot_Mesele_Resume.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <a class="btn" href="#projects">See the work</a>
+        <a class="btn" href="https://github.com/SirCartier50" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <!-- signature: one of his systems, running -->
+      <figure class="pipe">
+        <figcaption class="pipe__label">Dues — how one message becomes a text. <a href="#projects">See all seven projects</a></figcaption>
+        <svg viewBox="0 0 720 56" role="img" aria-label="Pipeline diagram: a message moves from inbox, through a sender-blind extractor and a sender-aware verifier, into a deterministic router, and out as a notification.">
+          <line class="track" x1="24" y1="16" x2="696" y2="16"/>
+          <circle class="node n1" cx="24"  cy="16" r="6"/>
+          <circle class="node n2" cx="192" cy="16" r="6"/>
+          <circle class="node n3" cx="360" cy="16" r="6"/>
+          <circle class="node n4" cx="528" cy="16" r="6"/>
+          <circle class="node n5" cx="696" cy="16" r="6"/>
+          <circle class="pulse" cx="24" cy="16" r="3.5"/>
+          <text class="cap" x="24"  y="42" text-anchor="start">INBOX</text>
+          <text class="cap" x="192" y="42" text-anchor="middle">EXTRACT</text>
+          <text class="cap" x="360" y="42" text-anchor="middle">VERIFY</text>
+          <text class="cap" x="528" y="42" text-anchor="middle">ROUTE</text>
+          <text class="cap" x="696" y="42" text-anchor="end">NOTIFY</text>
+        </svg>
+      </figure>
     </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+
+    <div class="cue" aria-hidden="true">
+      <div class="wrap"><p class="scroll-cue">Scroll</p></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =================================================== about ======== -->
+    <section class="section" id="about">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow">About</p>
+          <h2 class="section-title">The second run</h2>
         </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+        <div class="prose reveal" style="--d:110ms">
+          <p>
+            Most of what I have shipped in the last year is a version of the same idea: something that runs on its own
+            schedule and earns the right to interrupt you. An agent that reads an inbox for obligations rather than
+            messages. Three agents that provision an AWS account and then babysit it. A watcher that checks company
+            career pages at the source instead of trusting a job board.
+          </p>
+          <p>
+            Before that, the same instinct showed up as infrastructure work. At the UC Santa Cruz Police Department I
+            built and deployed a crime visualization dashboard that put campus incident data in front of
+            <strong>20,000+ students, officers and community members</strong>, containerized and fed by automated
+            pipelines. At GlobiFYE I worked in an agile team on a job-listing and networking platform.
+          </p>
+          <p>
+            I finished my BS in computer science at UC Santa Cruz and I am there now for graduate work. The parts I
+            care about are the unglamorous ones — what happens on the second run, what it costs, and how you know it
+            worked.
+          </p>
+
+          <ul class="facts">
+            <li><b>Based</b><span>Santa Cruz, California</span></li>
+            <li><b>Now</b><span>MS computer science, UC Santa Cruz</span></li>
+            <li><b>Working on</b><span>Agents, cloud infrastructure, full-stack products</span></li>
+            <li><b>Open to</b><span>Software engineering roles</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================== work ========= -->
+    <section class="section" id="work">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow">Experience</p>
+          <h2 class="section-title">Where I have shipped</h2>
+        </div>
+        <ul class="tl" data-stagger="90">
+          <li class="reveal">
+            <span class="tl__when">Jan 2025 — June 2025</span>
+            <h3 class="tl__what">UC Santa Cruz Police Department</h3>
+            <p class="tl__role">Software engineering intern</p>
+            <ul>
+              <li>Built and deployed a production crime visualization dashboard in Power BI, Node.js, Docker and PostgreSQL, giving 20,000+ stakeholders real-time access to campus crime data.</li>
+              <li>Replaced scattered reporting with one web platform students, officers and community members could all use.</li>
+              <li>Automated the data pipelines behind it and containerized the deployment so it scaled without hand-holding.</li>
+            </ul>
+          </li>
+          <li class="reveal">
+            <span class="tl__when">Sep 2024 — Apr 2025</span>
+            <h3 class="tl__what">GlobiFYE</h3>
+            <p class="tl__role">Software development intern</p>
+            <ul>
+              <li>Worked in an agile team on a job-listing and networking platform built with React, Node.js, Express and PostgreSQL on Azure.</li>
+              <li>Shipped blog functionality so users could publish professional content and event updates.</li>
+            </ul>
+          </li>
         </ul>
-    </header>
-    <!-- End header -->
+      </div>
+    </section>
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Mignot Mesele</h1>
-            <h2>Software Engineer</h2>
-            <a href="Mignot_Mesele_Resume.pdf" download="Mignot_Mesele_Resume.pdf" class="btn-rounded-white">Download Resume</a>
+    <!-- =================================================== education ==== -->
+    <section class="section" id="education">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow">Education</p>
+          <h2 class="section-title">UC Santa Cruz</h2>
         </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        I’m a software engineer experienced in building and deploying scalable full-stack applications using technologies like Node.js, React, Express.js, PostgreSQL, and Docker. 
-      My work spans backend development, cloud infrastructure, and data visualization — from developing real-time dashboards for 20,000+ stakeholders to automating pipelines for production systems. I thrive on turning complex problems into maintainable, high-impact solutions and enjoy working in agile, collaborative environments. 
-      I’m particularly interested in software systems, automation, and data-driven decision-making.
-
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End #about -->
-
-    <div id="experience" class="background-alt">
-	  <h2 class="heading">Work Experience</h2>
-	  <div id="experience-timeline">
-	
-	    <div data-date="Jan 2025 – June 2025">
-	      <h3>UCSC Police Department</h3>
-	      <h4>Software Engineering Intern</h4>
-	      <p>
-	        Developed and deployed a production-ready crime visualization dashboard using Power BI, Node.js, JavaScript, Docker, and PostgreSQL, delivering real-time insights that improved accessibility of campus crime data for 20,000+ stakeholders.<br>
-	        Centralized reporting access for students, police, and community members through a user-friendly web platform.<br>
-	        Automated data pipelines and ensured scalability via containerized deployment.
-	      </p>
-	    </div>
-	
-	    <div data-date="Sep 2024 – Apr 2025">
-	      <h3>GlobiFYE</h3>
-	      <h4>Software Development Intern</h4>
-	      <p>
-	        Collaborated in an agile team to build a scalable job-listing and networking platform using React, Node.js, Express.js, PostgreSQL, and Azure.<br>
-	        Implemented blog functionality to enable users to share professional content and event updates.
-	      </p>
-	    </div>
-	
-	  </div>
-	</div>
-
-    <!-- End #experience -->
-
-   <div id="education">
-	  <h2 class="heading">Education</h2>
-	
-	  <div class="education-block">
-	    <h3>University of California, Santa Cruz</h3>
-	    <span class="education-date">Sept 2021 – June 2025</span>
-	    <h4>Bachelor of Science in Computer Science</h4>
-	    <ul>
-	      <li>Focus on software systems, data structures, algorithms, and machine learning.</li>
-	      <li>Completed advanced coursework in computer architecture, systems design, and networks.</li>
-	      <li>Developed multiple full-stack and data-driven projects applying core CS concepts.</li>
-	    </ul>
-	  </div>
-	
-	  <div class="education-block">
-	    <h3>University of California, Santa Cruz</h3>
-	    <span class="education-date">June 2025 – Present</span>
-	    <h4>Graduate Studies in Computer Science</h4>
-	    <ul>
-	      <li>Pursuing graduate-level coursework and research in software engineering and intelligent systems.</li>
-	      <li>Expanding focus on quantum computing, machine learning, and applied AI methods.</li>
-	    </ul>
-	  </div>
-	
-	</div>
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>TCG Tracker</h3>
-		        <p>
-		            Collaborated with a team to create a trading card game collection application that enables users to grade and calculate the value of their cards using Javascript, Vite, React, Firebase, Google Cloud Vision, and Node.js.
-		        </p>
-			<div>
-			        <a href="https://github.com/SirCartier50/TCG-Tracker">View Project</a>
-			</div>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Zema</h3>
-		        <p>
-		            Created a full stack web application that empowers users to track and analyze eczema flare-ups by integrating AI-powered image scanning using Javascript, Vite, React, Flask, Firebase, Tensorflow, Python, and TailwindCSS. 
-		        </p>
-			<div>
-			        <a href="https://github.com/SirCartier50/zema">View Project</a>
-			</div>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		    
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Cardify</h3>
-		        <p>
-		            Developed a full stack Flashcard SaaS application using Next.js and React, featuring dynamic flashcard creation and management. Integrated Firestore for database management, Clerk for user authentication, OpenRouter API for AI-powered flashcards, and Stripe for subscription-based monetization. Deployed the application using  Amazon Elastic Beanstalk.
-		        </p>
-			<div>
-			        <a href="https://github.com/SirCartier50/Cardify">View Project</a>
-				<p> | </p>
-				<a  href="https://cardify-eight.vercel.app/">Visit Site</a>
-			</div>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>ConcurConnect</h3>
-		        <p>
-		            Designed a multilayered client-server architecture utilizing the HTTP protocol, facilitating parallel communication and seamless data exchange across multiple clients.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/ConcurConnect">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Huffman Compression</h3>
-		        <p>
-		            Developed a program that implements Huffman compression to effectively compress files in a lossless data format.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/File%20Compressor">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Modbot Wireless Control System</h3>
-		        <p>
-		            Developed client and server programs that take input from a wired controller, connected to a laptop, and sends that information to a modular bot, enabling it to move wirelessly using the Python socket library.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/modbot%20client-server">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Modbot Distance Sensor</h3>
-		        <p>
-		            Integrated a distance sensor with the Modbot using Raspberry Pi Pico and GPIO library, enabling the robot to perform object recognition and avoid obstacles based on distance measurements.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/modbot%20distance%20sensor">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Chat ai</h3>
-		        <p>
-		            Developed a streamlined application using Next.js, React, and Material-UI, featuring a chat interface for user interaction with the Llama 3.1 LLM via the OpenRouter API. Integrating Firebase for authentication and Firestore database management.
-		        </p>
-		        <a href="https://github.com/SirCartier50/chatsupportai">View Project</a>
-			<p> | </p>
-			<a href="https://chatsupportai-fv8a24iuf-mignot-meseles-projects.vercel.app">View site</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Image Deuteranopic Converter</h3>
-		        <p>
-		            Developed a tool to convert images to a deuteranopic color scheme, enhancing accessibility for individuals with deuteranopia by simulating color perception adjustments.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/Image%20deuteranopic%20converter">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Matrix ADT</h3>
-		        <p>
-		            Implemented an Abstract Data Type (ADT) for matrix operations, including addition, multiplication, and inversion, supporting a variety of matrix manipulations and computations.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/Matrix%20ADT">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Pi & e Approximation</h3>
-		        <p>
-		            Developed algorithms for approximating the values of Pi and e using various numerical methods, demonstrating the accuracy and efficiency of different approximation techniques.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/Pi%20%26%20e%20approximation">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Sorting Algorithms</h3>
-		        <p>
-		            Developed and analyzed various sorting algorithms, including quicksort, mergesort, and bubblesort, to evaluate their performance and efficiency across different datasets.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/Sorting%20Algorithms">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>BFS Graph ADT</h3>
-		        <p>
-		            Implemented a Breadth-First Search (BFS) algorithm for a Graph Abstract Data Type (ADT), enabling efficient traversal and searching of graph structures using a queue-based approach.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/BFS%20Graph%20ADT">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>DFS Graph ADT</h3>
-		        <p>
-		            Implemented a Depth-First Search (DFS) algorithm for a Graph Abstract Data Type (ADT), facilitating thorough exploration of graph nodes using a stack-based approach.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/DFS%20Graph%20ADT">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>BST Dictionary ADT</h3>
-		        <p>
-		            Developed a Binary Search Tree (BST) implementation for a Dictionary Abstract Data Type (ADT), optimizing data insertion, deletion, and search operations with logarithmic time complexity.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/BST%20Dictionary%20ADT">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>RBT Dictionary ADT</h3>
-		        <p>
-		            Implemented a Red-Black Tree (RBT) for a Dictionary Abstract Data Type (ADT), ensuring balanced tree structure and efficient data operations with guaranteed logarithmic time complexity.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/RBT%20Dictionary%20ADT">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Big Integer ADT</h3>
-		        <p>
-		            Created an Abstract Data Type (ADT) for handling arbitrarily large integers, enabling operations such as addition, subtraction, multiplication, and division beyond the limits of standard data types.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/Big%20Integer%20ADT">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-		<div class="project shadow-large">
-		    <div class="project-image">
-		        <img src="images/project.jpg" />
-		    </div>
-		    <!-- End .project-image -->
-		    <div class="project-info">
-		        <h3>Battle.Net Auto Installer</h3>
-		        <p>
-		            Constructed a Python script using the pyAutoGui and OS libraries to automatically install games on the Battle.net launcher, addressing an issue with the PC’s secondary SSD.
-		        </p>
-		        <a href="https://github.com/SirCartier50/Projects/tree/main/Battle.net%20auto%20Installer">View Project</a>
-		    </div>
-		    <!-- End .project-info -->
-		</div>
-		<!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>Python</li>
-	    <li>Java</li>
-	    <li>JavaScript</li>
-	    <li>HTML/CSS</li>
-	    <li>RISC V</li>
-	    <li>C</li>
-	    <li>C++</li>
-	    <li>C#</li>
-	    <li>Bash</li>
-	    <li>Powershell</li>
-	    <li>SQL</li>
-	    <li>Kotlin</li>
-	    <li>Git</li>
-	    <li>Github</li>
-	    <li>Django</li>
-	    <li>Pygame</li>
-	    <li>PostgreSQL</li>
-	    <li>Node.js</li>
-	    <li>Express.js</li>
-	    <li>Unix</li>
-	    <li>PowerBI</li>
-	    <li>Cloud SQL</li>
-	   <li>Jetpack Compose</li>
-	    <li>Socket</li>
-	    <li>pyAutoGui</li>
-	    <li>selenium</li>
-	    <li>React</li>
-	    <li>Next.js</li>
-	    
+        <ul class="tl" data-stagger="90">
+          <li class="reveal">
+            <span class="tl__when">June 2025 — present</span>
+            <h3 class="tl__what">Graduate studies, computer science</h3>
+            <p class="tl__role">University of California, Santa Cruz</p>
+            <ul>
+              <li>Graduate coursework and research in software engineering and intelligent systems.</li>
+              <li>Focused on quantum computing, machine learning and applied AI methods.</li>
+            </ul>
+          </li>
+          <li class="reveal">
+            <span class="tl__when">Sep 2021 — June 2025</span>
+            <h3 class="tl__what">BS, computer science</h3>
+            <p class="tl__role">University of California, Santa Cruz</p>
+            <ul>
+              <li>Software systems, data structures, algorithms and machine learning.</li>
+              <li>Advanced coursework in computer architecture, systems design and networks.</li>
+            </ul>
+          </li>
         </ul>
-    </div>
-    <!-- End #skills -->
+      </div>
+    </section>
 
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/f/xpzvzqep">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+    <!-- =================================================== projects ===== -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="eyebrow">Projects</p>
+          <h2 class="section-title">Seven things I built, and how they work</h2>
         </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="current-year">2025</span> Mignot Mesele
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/SirCartier50/Projects/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/mignot-mesele-8207a8259/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="filters reveal" role="group" aria-label="Filter projects" style="--d:90ms">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All <span class="n"></span></button>
+          <button class="filter" type="button" data-filter="agents" aria-pressed="false">Agents <span class="n"></span></button>
+          <button class="filter" type="button" data-filter="cloud" aria-pressed="false">Cloud &amp; infra <span class="n"></span></button>
+          <button class="filter" type="button" data-filter="apps" aria-pressed="false">Apps <span class="n"></span></button>
+        </div>
+
+        <div class="projects" data-stagger="70">
+
+          <!-- Dues -->
+          <article class="proj reveal" data-tags="agents">
+            <p class="proj__meta">
+              <span class="proj__status"><span class="dot"></span>Source</span>
+              <span class="sep">/</span><span>2026</span>
+              <span class="sep">/</span><span>AWS Agents for Humans hackathon</span>
+            </p>
+            <h3 class="proj__name">Dues <em>strands agents sdk</em></h3>
+            <p class="proj__lede">
+              A background agent that reads your inbox for obligations rather than messages, and texts you only when
+              one is genuinely urgent.
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>Strands Agents SDK</li><li>Next.js</li><li>Neon Postgres</li><li>Gmail API</li><li>Telegram</li><li>Vercel</li>
+            </ul>
+            <div class="proj__actions">
+              <button class="toggle" type="button" aria-expanded="false" aria-controls="d-dues">
+                <span class="toggle__text">How it works</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <a class="link" href="https://github.com/SirCartier50/Dues" target="_blank" rel="noopener">Source</a>
             </div>
-        </div>
-    </footer>
-    <!-- End footer -->
+            <div class="proj__detail" id="d-dues"><div><div class="inner">
+              <p>
+                The hard case is one sender with three kinds of mail. A company you applied to sends "pick an interview
+                slot by tomorrow", "join our virtual career fair", and a monthly newsletter — same domain, completely
+                different importance. No sender or keyword rule separates those, so Dues reads for what is being asked
+                of you instead of who sent it.
+              </p>
+              <dl>
+                <div>
+                  <dt>Pipeline</dt>
+                  <dd>An extractor that never sees the sender, domain or display name; a second, sender-aware verifier
+                    with access to thread history; and a deterministic router that takes the union of their urgent
+                    votes. No model decides whether to text you.</dd>
+                </div>
+                <div>
+                  <dt>Output</dt>
+                  <dd>Urgent goes straight to your phone over Telegram. Digest waits in an open-obligations list.
+                    Noise is logged and dropped. Duplicates attach to the existing obligation instead of texting again,
+                    and replying <code>DONE a3f2</code> closes it.</dd>
+                </div>
+                <div>
+                  <dt>Measured</dt>
+                  <dd>A deterministic evaluator scores urgent recall, catastrophic-miss rate and same-sender
+                    separation. No LLM judge.</dd>
+                </div>
+              </dl>
+            </div></div></div>
+          </article>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+          <!-- Nimbus -->
+          <article class="proj reveal" data-tags="agents cloud">
+            <p class="proj__meta">
+              <span class="proj__status"><span class="dot dot--live"></span>Live</span>
+              <span class="sep">/</span><span>2026</span>
+            </p>
+            <h3 class="proj__name">Nimbus <em>agentic aws</em></h3>
+            <p class="proj__lede">
+              Describe the infrastructure you want in plain English. Three agents plan it, deploy it, and keep it from
+              running up a bill.
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>FastAPI</li><li>Amazon Bedrock (Nova)</li><li>boto3</li><li>Next.js</li><li>TypeScript</li><li>Clerk</li><li>Supabase</li>
+            </ul>
+            <div class="proj__actions">
+              <button class="toggle" type="button" aria-expanded="false" aria-controls="d-nimbus">
+                <span class="toggle__text">How it works</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <a class="link" href="https://github.com/SirCartier50/nimbus" target="_blank" rel="noopener">Source</a>
+              <a class="link" href="https://nimbus-three-gamma.vercel.app" target="_blank" rel="noopener">Visit site</a>
+            </div>
+            <div class="proj__detail" id="d-nimbus"><div><div class="inner">
+              <p>
+                "I need a REST API with a database" becomes an architecture plan with a cost estimate, which you approve
+                before anything is provisioned.
+              </p>
+              <dl>
+                <div>
+                  <dt>Architect</dt>
+                  <dd>Turns the request into an AWS plan with cost estimates, optionally restricted to free-tier
+                    eligible services only.</dd>
+                </div>
+                <div>
+                  <dt>Executor</dt>
+                  <dd>Provisions and tags EC2, S3, DynamoDB and Lambda through boto3 once you approve, then generates
+                    <code>setup.sh</code>, <code>teardown.sh</code>, <code>docker-compose.yml</code> and an
+                    infrastructure manifest.</dd>
+                </div>
+                <div>
+                  <dt>Bodyguard</dt>
+                  <dd>Runs in the background watching CloudWatch metrics and auto-stops idle EC2 instances, so a box
+                    you forgot about does not turn into a surprise bill.</dd>
+                </div>
+                <div>
+                  <dt>Visible</dt>
+                  <dd>A live activity panel streams each agent's reasoning, so you can see what it is doing and why
+                    before you commit to it.</dd>
+                </div>
+              </dl>
+            </div></div></div>
+          </article>
+
+          <!-- Scoutly -->
+          <article class="proj reveal" data-tags="agents cloud">
+            <p class="proj__meta">
+              <span class="proj__status"><span class="dot dot--live"></span>Live</span>
+              <span class="sep">/</span><span>2026</span>
+            </p>
+            <h3 class="proj__name">Scoutly <em>career watch</em></h3>
+            <p class="proj__lede">
+              Watches company career pages for internships, new-grad roles and fellowships — straight from the source,
+              not a job board.
+            </p>
+            <ul class="tags">
+              <li>Electron</li><li>React 19</li><li>TypeScript</li><li>Tailwind CSS</li><li>Cloudflare Workers</li><li>D1</li><li>Puppeteer</li><li>Zod</li>
+            </ul>
+            <div class="proj__actions">
+              <button class="toggle" type="button" aria-expanded="false" aria-controls="d-scoutly">
+                <span class="toggle__text">How it works</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <a class="link" href="https://github.com/SirCartier50/Scoutly" target="_blank" rel="noopener">Source</a>
+              <a class="link" href="https://scoutly-ebon.vercel.app" target="_blank" rel="noopener">Visit site</a>
+            </div>
+            <div class="proj__detail" id="d-scoutly"><div><div class="inner">
+              <p>
+                Aggregators lag the pages they scrape and quietly drop the programs that never get posted to them.
+                Scoutly goes to the careers page itself, on a schedule, and tells you what changed.
+              </p>
+              <dl>
+                <div>
+                  <dt>Collection</dt>
+                  <dd>Per-company connectors parse static boards with Cheerio and fall back to Cloudflare's headless
+                    browser for JavaScript-rendered ones. Everything is validated with Zod before it reaches the
+                    database.</dd>
+                </div>
+                <div>
+                  <dt>Resume-aware</dt>
+                  <dd>Reads your resume out of PDF or DOCX, so postings can be weighed against what you have actually
+                    done rather than a keyword.</dd>
+                </div>
+                <div>
+                  <dt>Shape</dt>
+                  <dd>A Windows desktop app on Electron and electron-vite, backed by a Cloudflare Worker with D1 for
+                    storage — plus a hosted sign-in for people who would rather not install anything.</dd>
+                </div>
+                <div>
+                  <dt>Checks</dt>
+                  <dd>Scripted database, connector, resume and end-to-end checks run before a build ships.</dd>
+                </div>
+              </dl>
+            </div></div></div>
+          </article>
+
+          <!-- Course Agent -->
+          <article class="proj reveal" data-tags="agents cloud">
+            <p class="proj__meta">
+              <span class="proj__status"><span class="dot dot--live"></span>Live</span>
+              <span class="sep">/</span><span>2026</span>
+            </p>
+            <h3 class="proj__name">Course Agent <em>cf_ai_course_agent</em></h3>
+            <p class="proj__lede">
+              An AI teaching assistant that answers from a real syllabus and escalates everything it cannot answer to
+              the professor.
+            </p>
+            <ul class="tags">
+              <li>TypeScript</li><li>Hono</li><li>Cloudflare Workers AI</li><li>D1</li><li>KV</li><li>Workflows</li><li>Pages</li><li>React 19</li>
+            </ul>
+            <div class="proj__actions">
+              <button class="toggle" type="button" aria-expanded="false" aria-controls="d-course">
+                <span class="toggle__text">How it works</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <a class="link" href="https://github.com/SirCartier50/cf_ai_course_agent" target="_blank" rel="noopener">Source</a>
+              <a class="link" href="https://course-agent.pages.dev" target="_blank" rel="noopener">Visit site</a>
+            </div>
+            <div class="proj__detail" id="d-course"><div><div class="inner">
+              <p>
+                A professor uploads a syllabus and a Cloudflare Workflow parses out deadlines, grading weights,
+                policies and office hours. Students then ask questions against that course, not against a general
+                model.
+              </p>
+              <dl>
+                <div>
+                  <dt>Tools</dt>
+                  <dd>Eight of them — syllabus policy lookup, deadlines, grading weights, office hours, knowledge-base
+                    search, course-materials search, a grade scenario calculator, and ticket creation.</dd>
+                </div>
+                <div>
+                  <dt>Escalation</dt>
+                  <dd>When the agent is not confident, it files a ticket instead of guessing. The professor resolves or
+                    denies it and can fold the answer back into the knowledge base for the next student who asks.</dd>
+                </div>
+                <div>
+                  <dt>Guardrails</dt>
+                  <dd>It cites sources, never answers assignments or exams directly, and obeys per-course rules the
+                    professor writes into its system prompt.</dd>
+                </div>
+                <div>
+                  <dt>Runs on</dt>
+                  <dd>Workers, Workers AI (Llama 3.3 70B with tool calling), D1, KV, Workflows and Pages.</dd>
+                </div>
+              </dl>
+            </div></div></div>
+          </article>
+
+          <!-- Cardify -->
+          <article class="proj reveal" data-tags="apps">
+            <p class="proj__meta">
+              <span class="proj__status"><span class="dot"></span>Source</span>
+              <span class="sep">/</span><span>2026</span>
+            </p>
+            <h3 class="proj__name">Cardify <em>flashcard saas</em></h3>
+            <p class="proj__lede">
+              Paste any text and get a study-ready deck, plus a public marketplace, study analytics and subscription
+              billing.
+            </p>
+            <ul class="tags">
+              <li>Next.js</li><li>React</li><li>Material UI</li><li>Firestore</li><li>Clerk</li><li>OpenRouter</li><li>Stripe</li><li>Vercel</li>
+            </ul>
+            <div class="proj__actions">
+              <button class="toggle" type="button" aria-expanded="false" aria-controls="d-cardify">
+                <span class="toggle__text">How it works</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <a class="link" href="https://github.com/SirCartier50/Cardify" target="_blank" rel="noopener">Source</a>
+            </div>
+            <div class="proj__detail" id="d-cardify"><div><div class="inner">
+              <p>
+                Built as a product rather than a demo: real auth, a paid tier that actually gates generation limits,
+                and analytics that make studying measurable.
+              </p>
+              <dl>
+                <div>
+                  <dt>Generation</dt>
+                  <dd>Llama 3.1 through OpenRouter turns pasted text into cards — ten per generation on the free tier,
+                    forty on premium.</dd>
+                </div>
+                <div>
+                  <dt>Marketplace</dt>
+                  <dd>Publish a deck for anyone to use, browse what others published, clone one into your own
+                    collection.</dd>
+                </div>
+                <div>
+                  <dt>Study mode</dt>
+                  <dd>One card at a time, marked correct or missed, feeding a dashboard of streaks, per-deck mastery
+                    and session history.</dd>
+                </div>
+                <div>
+                  <dt>Plumbing</dt>
+                  <dd>Clerk for authentication, Firestore for data, Stripe Checkout for subscriptions, deployed on
+                    Vercel.</dd>
+                </div>
+              </dl>
+            </div></div></div>
+          </article>
+
+          <!-- Zema -->
+          <article class="proj reveal" data-tags="apps">
+            <p class="proj__meta">
+              <span class="proj__status"><span class="dot"></span>Source</span>
+              <span class="sep">/</span><span>2025</span>
+            </p>
+            <h3 class="proj__name">Zema <em>eczema tracking</em></h3>
+            <p class="proj__lede">
+              Track and analyze eczema flare-ups over time, with AI image scanning that turns a photo into a data point
+              instead of a note in your camera roll.
+            </p>
+            <ul class="tags">
+              <li>React</li><li>Vite</li><li>Flask</li><li>Python</li><li>TensorFlow</li><li>Firebase</li><li>Tailwind CSS</li>
+            </ul>
+            <div class="proj__actions">
+              <button class="toggle" type="button" aria-expanded="false" aria-controls="d-zema">
+                <span class="toggle__text">How it works</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <a class="link" href="https://github.com/SirCartier50/zema" target="_blank" rel="noopener">Source</a>
+            </div>
+            <div class="proj__detail" id="d-zema"><div><div class="inner">
+              <p>
+                Flare-ups are easy to feel and hard to remember accurately. Zema pairs a React front end with a Flask
+                service running a TensorFlow image classifier, so each photo becomes part of a history you can actually
+                look back at.
+              </p>
+              <dl>
+                <div><dt>Front end</dt><dd>React, Vite and Tailwind CSS.</dd></div>
+                <div><dt>Service</dt><dd>Flask and Python, with a TensorFlow model behind the image scanning.</dd></div>
+                <div><dt>Data and auth</dt><dd>Firebase.</dd></div>
+              </dl>
+            </div></div></div>
+          </article>
+
+          <!-- TCG Tracker -->
+          <article class="proj reveal" data-tags="apps">
+            <p class="proj__meta">
+              <span class="proj__status"><span class="dot"></span>Source</span>
+              <span class="sep">/</span><span>2025</span>
+              <span class="sep">/</span><span>Team project</span>
+            </p>
+            <h3 class="proj__name">TCG Tracker <em>grade it or keep it</em></h3>
+            <p class="proj__lede">
+              Tells you whether a trading card is worth grading by putting the raw price, the grading fee and the
+              graded value side by side.
+            </p>
+            <ul class="tags">
+              <li>React</li><li>Vite</li><li>Node.js</li><li>Firebase</li><li>Google Cloud Vision</li>
+            </ul>
+            <div class="proj__actions">
+              <button class="toggle" type="button" aria-expanded="false" aria-controls="d-tcg">
+                <span class="toggle__text">How it works</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <a class="link" href="https://github.com/SirCartier50/TCG-Tracker" target="_blank" rel="noopener">Source</a>
+              <a class="link" href="https://www.youtube.com/watch?v=MsXO6uxJbBY" target="_blank" rel="noopener">Watch demo</a>
+            </div>
+            <div class="proj__detail" id="d-tcg"><div><div class="inner">
+              <p>
+                Grading a card costs money and only pays off for some cards. TCG Tracker does that arithmetic before
+                anything gets mailed anywhere.
+              </p>
+              <dl>
+                <div>
+                  <dt>Lookup</dt>
+                  <dd>Find a card by name, or scan it — Google Cloud Vision handles the recognition.</dd>
+                </div>
+                <div>
+                  <dt>Collection</dt>
+                  <dd>Cards you add go into a personal database that tracks what you paid and what it is worth now.</dd>
+                </div>
+                <div>
+                  <dt>Built with</dt>
+                  <dd>React and Vite on the client, Node.js on the server, Firebase for storage and auth. Built with a
+                    team.</dd>
+                </div>
+              </dl>
+            </div></div></div>
+          </article>
+
+        </div>
+
+        <p class="empty" id="no-match" hidden>Nothing in that category.</p>
+
+        <p class="archive">
+          Coursework and smaller tools — Huffman compression, a Modbot wireless control system, graph and dictionary
+          ADTs, a deuteranopia image converter — live in
+          <a href="https://github.com/SirCartier50/Projects" target="_blank" rel="noopener">SirCartier50/Projects</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================================================== stack ======== -->
+    <section class="section" id="stack">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow">Stack</p>
+          <h2 class="section-title">What I reach for</h2>
+        </div>
+        <div class="stack reveal" style="--d:110ms">
+          <div class="stack__row">
+            <h3>Languages</h3>
+            <p>Python <i>/</i> TypeScript <i>/</i> JavaScript <i>/</i> Java <i>/</i> C <i>/</i> C++ <i>/</i> C# <i>/</i> SQL <i>/</i> Kotlin <i>/</i> Bash <i>/</i> PowerShell <i>/</i> RISC-V assembly</p>
+          </div>
+          <div class="stack__row">
+            <h3>Frontend</h3>
+            <p>React <i>/</i> Next.js <i>/</i> Vite <i>/</i> Tailwind CSS <i>/</i> Material UI <i>/</i> Electron <i>/</i> Jetpack Compose</p>
+          </div>
+          <div class="stack__row">
+            <h3>Backend &amp; data</h3>
+            <p>Node.js <i>/</i> Express <i>/</i> FastAPI <i>/</i> Flask <i>/</i> Django <i>/</i> Hono <i>/</i> PostgreSQL <i>/</i> Neon <i>/</i> Supabase <i>/</i> Firestore <i>/</i> Cloudflare D1 <i>/</i> SQLAlchemy</p>
+          </div>
+          <div class="stack__row">
+            <h3>Cloud &amp; infra</h3>
+            <p>AWS<span> (EC2, S3, DynamoDB, Lambda, Bedrock)</span> <i>/</i> Cloudflare Workers <i>/</i> Azure <i>/</i> Docker <i>/</i> Vercel <i>/</i> Git <i>/</i> Unix</p>
+          </div>
+          <div class="stack__row">
+            <h3>AI &amp; agents</h3>
+            <p>Strands Agents SDK <i>/</i> Amazon Bedrock <i>/</i> Workers AI <i>/</i> OpenRouter <i>/</i> TensorFlow <i>/</i> Google Cloud Vision</p>
+          </div>
+          <div class="stack__row">
+            <h3>Also</h3>
+            <p>Power BI <i>/</i> Clerk <i>/</i> Stripe <i>/</i> Selenium <i>/</i> pyAutoGUI <i>/</i> Pygame</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================== contact ====== -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 class="contact__head">Let's build<br>something</h2>
+          <p class="hero__thesis">
+            I am looking for software engineering roles and I am happy to talk about any of the projects above. Send a
+            note and I will get back to you.
+          </p>
+
+          <form method="POST" action="https://formspree.io/f/xpzvzqep">
+            <input type="hidden" name="_subject" value="Contact request from personal website">
+            <label class="vh" for="email">Your email</label>
+            <input id="email" type="email" name="_replyto" placeholder="Your email" required>
+            <label class="vh" for="message">Your message</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            <button class="btn btn--solid" type="submit">Send message</button>
+          </form>
+
+          <div class="direct">
+            <a class="link" href="https://github.com/SirCartier50" target="_blank" rel="noopener">GitHub</a>
+            <a class="link" href="https://www.linkedin.com/in/mignot-mesele-8207a8259/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="link" href="Mignot_Mesele_Resume.pdf" download="Mignot_Mesele_Resume.pdf">Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer__row">
+      <p>&copy; <span id="year">2026</span> Mignot Mesele</p>
+      <p><a href="#top">Back to top</a></p>
+      <div class="socials">
+        <a href="https://github.com/SirCartier50" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mignot-mesele-8207a8259/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C21.6 8.75 23 11 23 14.3V21h-4v-5.9c0-1.4-.03-3.2-2-3.2-2 0-2.3 1.5-2.3 3.1V21h-4V9Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
 </body>
 
 </html>
